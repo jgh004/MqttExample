@@ -40,6 +40,8 @@ namespace MqttExample
 			cob_PubQos.SelectedIndex = 1;
 			cob_SubQos.SelectedIndex = 2;
 			cob_PubRetain.SelectedIndex = 0;
+			cob_WillQos.SelectedIndex = 2;
+			cob_WillRetain.SelectedIndex = 1;
 		}
 
 		private void tb_ClientId_TextChanged( object sender, EventArgs e )
@@ -122,7 +124,7 @@ namespace MqttExample
 				tb_log.ScrollToCaret();
 			}, log );
 		}
-		
+
 		private async Task ConnectAsync()
 		{
 			try
@@ -144,11 +146,20 @@ namespace MqttExample
 						.WithCredentials( tb_UserName.Text.Trim(), tb_Password.Text.Trim() )
 						.WithKeepAlivePeriod( TimeSpan.FromSeconds( 5 ) )
 						.WithProtocolVersion( MqttProtocolVersion.V311 )
-						.WithTcpServer( tb_Server.Text.Trim() )
-						//.WithWillMessage()
-						.Build();
+						.WithTcpServer( tb_Server.Text.Trim() );
 
-					await client.ConnectAsync( option );
+					if ( !string.IsNullOrWhiteSpace( tb_WillTopic.Text ) )
+					{
+						var msg = new MqttApplicationMessageBuilder()
+							.WithTopic( tb_WillTopic.Text.Trim() )
+							.WithQualityOfServiceLevel( (MqttQualityOfServiceLevel)Convert.ToInt32( cob_WillQos.SelectedItem ) )
+							.WithRetainFlag( Convert.ToBoolean( cob_WillRetain.SelectedItem ) )
+							.WithPayload( tb_WillMessage.Text.Trim() )
+							.Build();
+						option = option.WithWillMessage( msg );
+					}
+
+					await client.ConnectAsync( option.Build() );
 				}
 			}
 			catch ( Exception ex )
