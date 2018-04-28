@@ -146,7 +146,7 @@ namespace MqttExample
 						.WithCredentials( tb_UserName.Text.Trim(), tb_Password.Text.Trim() )
 						.WithKeepAlivePeriod( TimeSpan.FromSeconds( 5 ) )
 						.WithProtocolVersion( MqttProtocolVersion.V311 )
-						.WithTcpServer( tb_Server.Text.Trim() );
+						.WithTcpServer( tb_Server.Text.Trim(), Convert.ToInt32( nud_Port.Value ) );
 
 					if ( !string.IsNullOrWhiteSpace( tb_WillTopic.Text ) )
 					{

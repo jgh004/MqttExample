@@ -70,10 +70,13 @@
 			this.label1 = new System.Windows.Forms.Label();
 			this.tb_Server = new System.Windows.Forms.TextBox();
 			this.tb_log = new System.Windows.Forms.TextBox();
+			this.label16 = new System.Windows.Forms.Label();
+			this.nud_Port = new System.Windows.Forms.NumericUpDown();
 			this.contextMenuStrip1.SuspendLayout();
 			this.panel3.SuspendLayout();
 			this.panel2.SuspendLayout();
 			this.panel1.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.nud_Port)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// contextMenuStrip1
@@ -105,14 +108,14 @@
 			this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
 			this.panel3.Location = new System.Drawing.Point(0, 438);
 			this.panel3.Name = "panel3";
-			this.panel3.Size = new System.Drawing.Size(837, 69);
+			this.panel3.Size = new System.Drawing.Size(869, 69);
 			this.panel3.TabIndex = 43;
 			// 
 			// label11
 			// 
 			this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.label11.AutoSize = true;
-			this.label11.Location = new System.Drawing.Point(552, 41);
+			this.label11.Location = new System.Drawing.Point(584, 41);
 			this.label11.Name = "label11";
 			this.label11.Size = new System.Drawing.Size(47, 12);
 			this.label11.TabIndex = 86;
@@ -127,18 +130,18 @@
 			this.cob_PubRetain.Items.AddRange(new object[] {
             "False",
             "True"});
-			this.cob_PubRetain.Location = new System.Drawing.Point(602, 37);
+			this.cob_PubRetain.Location = new System.Drawing.Point(634, 37);
 			this.cob_PubRetain.Name = "cob_PubRetain";
 			this.cob_PubRetain.Size = new System.Drawing.Size(55, 20);
-			this.cob_PubRetain.TabIndex = 20;
+			this.cob_PubRetain.TabIndex = 95;
 			// 
 			// bt_Publish
 			// 
 			this.bt_Publish.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.bt_Publish.Location = new System.Drawing.Point(669, 36);
+			this.bt_Publish.Location = new System.Drawing.Point(701, 36);
 			this.bt_Publish.Name = "bt_Publish";
 			this.bt_Publish.Size = new System.Drawing.Size(75, 23);
-			this.bt_Publish.TabIndex = 21;
+			this.bt_Publish.TabIndex = 100;
 			this.bt_Publish.Text = "Publish";
 			this.bt_Publish.UseVisualStyleBackColor = true;
 			this.bt_Publish.Click += new System.EventHandler(this.bt_Publish_Click);
@@ -147,7 +150,7 @@
 			// 
 			this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.label5.AutoSize = true;
-			this.label5.Location = new System.Drawing.Point(546, 14);
+			this.label5.Location = new System.Drawing.Point(578, 14);
 			this.label5.Name = "label5";
 			this.label5.Size = new System.Drawing.Size(53, 12);
 			this.label5.TabIndex = 83;
@@ -163,10 +166,10 @@
             "0",
             "1",
             "2"});
-			this.cob_PubQos.Location = new System.Drawing.Point(602, 10);
+			this.cob_PubQos.Location = new System.Drawing.Point(634, 10);
 			this.cob_PubQos.Name = "cob_PubQos";
 			this.cob_PubQos.Size = new System.Drawing.Size(55, 20);
-			this.cob_PubQos.TabIndex = 18;
+			this.cob_PubQos.TabIndex = 85;
 			// 
 			// label4
 			// 
@@ -184,8 +187,8 @@
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.tb_Message.Location = new System.Drawing.Point(91, 37);
 			this.tb_Message.Name = "tb_Message";
-			this.tb_Message.Size = new System.Drawing.Size(447, 21);
-			this.tb_Message.TabIndex = 19;
+			this.tb_Message.Size = new System.Drawing.Size(445, 21);
+			this.tb_Message.TabIndex = 90;
 			this.tb_Message.Text = "Hello World";
 			// 
 			// label3
@@ -204,8 +207,8 @@
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.tb_PubTopic.Location = new System.Drawing.Point(91, 10);
 			this.tb_PubTopic.Name = "tb_PubTopic";
-			this.tb_PubTopic.Size = new System.Drawing.Size(447, 21);
-			this.tb_PubTopic.TabIndex = 17;
+			this.tb_PubTopic.Size = new System.Drawing.Size(445, 21);
+			this.tb_PubTopic.TabIndex = 80;
 			this.tb_PubTopic.Text = "toserver";
 			// 
 			// panel2
@@ -220,14 +223,14 @@
 			this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
 			this.panel2.Location = new System.Drawing.Point(0, 362);
 			this.panel2.Name = "panel2";
-			this.panel2.Size = new System.Drawing.Size(837, 76);
+			this.panel2.Size = new System.Drawing.Size(869, 76);
 			this.panel2.TabIndex = 42;
 			// 
 			// label10
 			// 
 			this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.label10.AutoSize = true;
-			this.label10.Location = new System.Drawing.Point(546, 50);
+			this.label10.Location = new System.Drawing.Point(578, 50);
 			this.label10.Name = "label10";
 			this.label10.Size = new System.Drawing.Size(53, 12);
 			this.label10.TabIndex = 75;
@@ -243,18 +246,18 @@
             "0",
             "1",
             "2"});
-			this.cob_SubQos.Location = new System.Drawing.Point(602, 46);
+			this.cob_SubQos.Location = new System.Drawing.Point(634, 46);
 			this.cob_SubQos.Name = "cob_SubQos";
 			this.cob_SubQos.Size = new System.Drawing.Size(55, 20);
-			this.cob_SubQos.TabIndex = 14;
+			this.cob_SubQos.TabIndex = 65;
 			// 
 			// bt_UnSubscribe
 			// 
 			this.bt_UnSubscribe.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.bt_UnSubscribe.Location = new System.Drawing.Point(752, 45);
+			this.bt_UnSubscribe.Location = new System.Drawing.Point(784, 45);
 			this.bt_UnSubscribe.Name = "bt_UnSubscribe";
 			this.bt_UnSubscribe.Size = new System.Drawing.Size(75, 23);
-			this.bt_UnSubscribe.TabIndex = 16;
+			this.bt_UnSubscribe.TabIndex = 75;
 			this.bt_UnSubscribe.Text = "Unsubscribe";
 			this.bt_UnSubscribe.UseVisualStyleBackColor = true;
 			this.bt_UnSubscribe.Click += new System.EventHandler(this.bt_UnSubscribe_Click);
@@ -262,10 +265,10 @@
 			// bt_Subscribe
 			// 
 			this.bt_Subscribe.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.bt_Subscribe.Location = new System.Drawing.Point(669, 45);
+			this.bt_Subscribe.Location = new System.Drawing.Point(701, 45);
 			this.bt_Subscribe.Name = "bt_Subscribe";
 			this.bt_Subscribe.Size = new System.Drawing.Size(75, 23);
-			this.bt_Subscribe.TabIndex = 15;
+			this.bt_Subscribe.TabIndex = 70;
 			this.bt_Subscribe.Text = "Subscribe";
 			this.bt_Subscribe.UseVisualStyleBackColor = true;
 			this.bt_Subscribe.Click += new System.EventHandler(this.bt_Subscribe_Click);
@@ -288,14 +291,16 @@
 			this.tb_SubTopic.Multiline = true;
 			this.tb_SubTopic.Name = "tb_SubTopic";
 			this.tb_SubTopic.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-			this.tb_SubTopic.Size = new System.Drawing.Size(444, 57);
-			this.tb_SubTopic.TabIndex = 13;
+			this.tb_SubTopic.Size = new System.Drawing.Size(445, 57);
+			this.tb_SubTopic.TabIndex = 60;
 			this.tb_SubTopic.Text = "$SYS/brokers/+/sysmon/#;$SYS/brokers/+/alarms/#;$SYS/brokers/+/metrics/messages/#" +
     ";$SYS/brokers/+/clients/#;will;toclient;toserver";
 			// 
 			// panel1
 			// 
 			this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.panel1.Controls.Add(this.nud_Port);
+			this.panel1.Controls.Add(this.label16);
 			this.panel1.Controls.Add(this.label14);
 			this.panel1.Controls.Add(this.cob_WillRetain);
 			this.panel1.Controls.Add(this.label15);
@@ -319,14 +324,14 @@
 			this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
 			this.panel1.Location = new System.Drawing.Point(0, 242);
 			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(837, 120);
+			this.panel1.Size = new System.Drawing.Size(869, 120);
 			this.panel1.TabIndex = 41;
 			// 
 			// label14
 			// 
 			this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.label14.AutoSize = true;
-			this.label14.Location = new System.Drawing.Point(552, 93);
+			this.label14.Location = new System.Drawing.Point(584, 93);
 			this.label14.Name = "label14";
 			this.label14.Size = new System.Drawing.Size(47, 12);
 			this.label14.TabIndex = 70;
@@ -341,10 +346,10 @@
 			this.cob_WillRetain.Items.AddRange(new object[] {
             "False",
             "True"});
-			this.cob_WillRetain.Location = new System.Drawing.Point(602, 89);
+			this.cob_WillRetain.Location = new System.Drawing.Point(634, 89);
 			this.cob_WillRetain.Name = "cob_WillRetain";
 			this.cob_WillRetain.Size = new System.Drawing.Size(55, 20);
-			this.cob_WillRetain.TabIndex = 10;
+			this.cob_WillRetain.TabIndex = 45;
 			// 
 			// label15
 			// 
@@ -362,15 +367,15 @@
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.tb_WillMessage.Location = new System.Drawing.Point(91, 89);
 			this.tb_WillMessage.Name = "tb_WillMessage";
-			this.tb_WillMessage.Size = new System.Drawing.Size(444, 21);
-			this.tb_WillMessage.TabIndex = 9;
+			this.tb_WillMessage.Size = new System.Drawing.Size(445, 21);
+			this.tb_WillMessage.TabIndex = 40;
 			this.tb_WillMessage.Text = "bye";
 			// 
 			// label12
 			// 
 			this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.label12.AutoSize = true;
-			this.label12.Location = new System.Drawing.Point(540, 66);
+			this.label12.Location = new System.Drawing.Point(572, 66);
 			this.label12.Name = "label12";
 			this.label12.Size = new System.Drawing.Size(59, 12);
 			this.label12.TabIndex = 66;
@@ -386,10 +391,10 @@
             "0",
             "1",
             "2"});
-			this.cob_WillQos.Location = new System.Drawing.Point(602, 62);
+			this.cob_WillQos.Location = new System.Drawing.Point(634, 62);
 			this.cob_WillQos.Name = "cob_WillQos";
 			this.cob_WillQos.Size = new System.Drawing.Size(55, 20);
-			this.cob_WillQos.TabIndex = 8;
+			this.cob_WillQos.TabIndex = 35;
 			// 
 			// label13
 			// 
@@ -407,14 +412,15 @@
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.tb_WillTopic.Location = new System.Drawing.Point(91, 62);
 			this.tb_WillTopic.Name = "tb_WillTopic";
-			this.tb_WillTopic.Size = new System.Drawing.Size(444, 21);
-			this.tb_WillTopic.TabIndex = 5;
+			this.tb_WillTopic.Size = new System.Drawing.Size(445, 21);
+			this.tb_WillTopic.TabIndex = 30;
 			this.tb_WillTopic.Text = "will";
 			// 
 			// label9
 			// 
+			this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.label9.AutoSize = true;
-			this.label9.Location = new System.Drawing.Point(251, 39);
+			this.label9.Location = new System.Drawing.Point(542, 39);
 			this.label9.Name = "label9";
 			this.label9.Size = new System.Drawing.Size(89, 12);
 			this.label9.TabIndex = 58;
@@ -423,15 +429,16 @@
 			// 
 			// cob_CleanSession
 			// 
+			this.cob_CleanSession.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.cob_CleanSession.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.cob_CleanSession.FormattingEnabled = true;
 			this.cob_CleanSession.Items.AddRange(new object[] {
             "False",
             "True"});
-			this.cob_CleanSession.Location = new System.Drawing.Point(343, 35);
+			this.cob_CleanSession.Location = new System.Drawing.Point(634, 35);
 			this.cob_CleanSession.Name = "cob_CleanSession";
 			this.cob_CleanSession.Size = new System.Drawing.Size(111, 20);
-			this.cob_CleanSession.TabIndex = 4;
+			this.cob_CleanSession.TabIndex = 25;
 			// 
 			// label8
 			// 
@@ -445,17 +452,19 @@
 			// 
 			// tb_ClientId
 			// 
+			this.tb_ClientId.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.tb_ClientId.Location = new System.Drawing.Point(91, 35);
 			this.tb_ClientId.Name = "tb_ClientId";
-			this.tb_ClientId.Size = new System.Drawing.Size(148, 21);
-			this.tb_ClientId.TabIndex = 3;
+			this.tb_ClientId.Size = new System.Drawing.Size(445, 21);
+			this.tb_ClientId.TabIndex = 20;
 			this.tb_ClientId.Text = "client1";
 			this.tb_ClientId.TextChanged += new System.EventHandler(this.tb_ClientId_TextChanged);
 			// 
 			// label7
 			// 
 			this.label7.AutoSize = true;
-			this.label7.Location = new System.Drawing.Point(481, 12);
+			this.label7.Location = new System.Drawing.Point(572, 12);
 			this.label7.Name = "label7";
 			this.label7.Size = new System.Drawing.Size(59, 12);
 			this.label7.TabIndex = 54;
@@ -465,16 +474,16 @@
 			// tb_Password
 			// 
 			this.tb_Password.ImeMode = System.Windows.Forms.ImeMode.Off;
-			this.tb_Password.Location = new System.Drawing.Point(543, 8);
+			this.tb_Password.Location = new System.Drawing.Point(634, 8);
 			this.tb_Password.Name = "tb_Password";
 			this.tb_Password.PasswordChar = '✪';
 			this.tb_Password.Size = new System.Drawing.Size(116, 21);
-			this.tb_Password.TabIndex = 2;
+			this.tb_Password.TabIndex = 15;
 			// 
 			// label6
 			// 
 			this.label6.AutoSize = true;
-			this.label6.Location = new System.Drawing.Point(275, 12);
+			this.label6.Location = new System.Drawing.Point(357, 12);
 			this.label6.Name = "label6";
 			this.label6.Size = new System.Drawing.Size(65, 12);
 			this.label6.TabIndex = 52;
@@ -483,18 +492,18 @@
 			// 
 			// tb_UserName
 			// 
-			this.tb_UserName.Location = new System.Drawing.Point(343, 8);
+			this.tb_UserName.Location = new System.Drawing.Point(425, 8);
 			this.tb_UserName.Name = "tb_UserName";
 			this.tb_UserName.Size = new System.Drawing.Size(111, 21);
-			this.tb_UserName.TabIndex = 1;
+			this.tb_UserName.TabIndex = 10;
 			// 
 			// bt_UnConnect
 			// 
 			this.bt_UnConnect.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.bt_UnConnect.Location = new System.Drawing.Point(752, 88);
+			this.bt_UnConnect.Location = new System.Drawing.Point(784, 88);
 			this.bt_UnConnect.Name = "bt_UnConnect";
 			this.bt_UnConnect.Size = new System.Drawing.Size(75, 23);
-			this.bt_UnConnect.TabIndex = 12;
+			this.bt_UnConnect.TabIndex = 55;
 			this.bt_UnConnect.Text = "Disconnect";
 			this.bt_UnConnect.UseVisualStyleBackColor = true;
 			this.bt_UnConnect.Click += new System.EventHandler(this.bt_UnConnect_Click);
@@ -502,10 +511,10 @@
 			// bt_Connect
 			// 
 			this.bt_Connect.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.bt_Connect.Location = new System.Drawing.Point(669, 88);
+			this.bt_Connect.Location = new System.Drawing.Point(701, 88);
 			this.bt_Connect.Name = "bt_Connect";
 			this.bt_Connect.Size = new System.Drawing.Size(75, 23);
-			this.bt_Connect.TabIndex = 11;
+			this.bt_Connect.TabIndex = 50;
 			this.bt_Connect.Text = "Connect";
 			this.bt_Connect.UseVisualStyleBackColor = true;
 			this.bt_Connect.Click += new System.EventHandler(this.bt_Connect_Click);
@@ -524,7 +533,7 @@
 			// 
 			this.tb_Server.Location = new System.Drawing.Point(91, 8);
 			this.tb_Server.Name = "tb_Server";
-			this.tb_Server.Size = new System.Drawing.Size(148, 21);
+			this.tb_Server.Size = new System.Drawing.Size(131, 21);
 			this.tb_Server.TabIndex = 0;
 			// 
 			// tb_log
@@ -535,14 +544,41 @@
 			this.tb_log.Multiline = true;
 			this.tb_log.Name = "tb_log";
 			this.tb_log.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-			this.tb_log.Size = new System.Drawing.Size(837, 242);
-			this.tb_log.TabIndex = 100;
+			this.tb_log.Size = new System.Drawing.Size(869, 242);
+			this.tb_log.TabIndex = 200;
+			// 
+			// label16
+			// 
+			this.label16.AutoSize = true;
+			this.label16.Location = new System.Drawing.Point(235, 12);
+			this.label16.Name = "label16";
+			this.label16.Size = new System.Drawing.Size(35, 12);
+			this.label16.TabIndex = 72;
+			this.label16.Text = "Port:";
+			this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			// 
+			// nud_Port
+			// 
+			this.nud_Port.Location = new System.Drawing.Point(273, 9);
+			this.nud_Port.Maximum = new decimal(new int[] {
+            65535,
+            0,
+            0,
+            0});
+			this.nud_Port.Name = "nud_Port";
+			this.nud_Port.Size = new System.Drawing.Size(67, 21);
+			this.nud_Port.TabIndex = 5;
+			this.nud_Port.Value = new decimal(new int[] {
+            1883,
+            0,
+            0,
+            0});
 			// 
 			// Main
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(837, 507);
+			this.ClientSize = new System.Drawing.Size(869, 507);
 			this.Controls.Add(this.tb_log);
 			this.Controls.Add(this.panel1);
 			this.Controls.Add(this.panel2);
@@ -559,6 +595,7 @@
 			this.panel2.PerformLayout();
 			this.panel1.ResumeLayout(false);
 			this.panel1.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.nud_Port)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -606,6 +643,8 @@
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.TextBox tb_Server;
 		private System.Windows.Forms.TextBox tb_log;
+		private System.Windows.Forms.NumericUpDown nud_Port;
+		private System.Windows.Forms.Label label16;
 	}
 }
 
